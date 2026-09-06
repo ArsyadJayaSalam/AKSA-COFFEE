@@ -1,0 +1,1097 @@
+/* ===============================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f4f1ea;
+    color: #1b1b1b;
+    overflow-x: hidden;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+/* ===============================
+   NAVBAR
+================================ */
+
+.navbar {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 7%;
+
+    color: white;
+
+    transition: 0.4s;
+}
+
+
+.navbar.scrolled {
+    position: fixed;
+    background: #1b1b1b;
+    padding: 18px 7%;
+}
+
+
+.logo {
+    font-family: "Anton", sans-serif;
+    font-size: 34px;
+    letter-spacing: 2px;
+}
+
+
+.logo span {
+    color: #e96b3c;
+}
+
+
+.nav-menu {
+    display: flex;
+    gap: 35px;
+}
+
+
+.nav-menu a {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+
+.nav-menu a::after {
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+    height: 2px;
+
+    background: white;
+
+    bottom: -6px;
+    left: 0;
+
+    transition: 0.3s;
+}
+
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+
+.nav-button {
+    background: #e96b3c;
+
+    padding: 12px 22px;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.nav-button:hover {
+    transform: translateY(-3px);
+    background: white;
+    color: #111;
+}
+
+
+.hamburger {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/* ===============================
+   HERO
+================================ */
+
+.hero {
+    height: 100vh;
+    min-height: 700px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 8%;
+
+    background-image:
+        url(kopling.png);
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    color: white;
+}
+
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.25)
+        );
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+}
+
+
+.hero-small {
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+
+.hero h1 {
+    font-family: "Anton", sans-serif;
+
+    font-size: clamp(70px, 10vw, 150px);
+
+    line-height: 0.9;
+    letter-spacing: 3px;
+}
+
+
+.hero h1 span {
+    color: #e96b3c;
+}
+
+
+.hero-description {
+    max-width: 500px;
+
+    margin-top: 25px;
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    color: #e7e7e7;
+}
+
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+
+.btn-primary {
+    background: #e96b3c;
+
+    padding: 15px 28px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+}
+
+
+.btn-outline {
+    border: 1px solid white;
+
+    padding: 15px 28px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+
+.btn-outline:hover {
+    background: white;
+    color: black;
+}
+
+
+.scroll-down {
+    position: absolute;
+
+    bottom: 35px;
+    left: 8%;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    z-index: 2;
+}
+
+
+.scroll-line {
+    width: 70px;
+    height: 1px;
+    background: white;
+}
+
+
+/* ===============================
+   INTRO TEXT
+================================ */
+
+.intro-text {
+    background: #e96b3c;
+
+    padding: 45px 8%;
+
+    text-align: center;
+}
+
+
+.intro-text p {
+    font-family: "Anton", sans-serif;
+
+    font-size: clamp(28px, 4vw, 60px);
+
+    letter-spacing: 2px;
+
+    color: white;
+}
+
+
+/* ===============================
+   GENERAL SECTION
+================================ */
+
+.section {
+    padding: 120px 8%;
+}
+
+
+.section-label {
+    color: #e96b3c;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+
+.section h2 {
+    font-family: "Anton", sans-serif;
+
+    font-size: clamp(50px, 7vw, 100px);
+
+    line-height: 0.95;
+    letter-spacing: 2px;
+}
+
+
+/* ===============================
+   ABOUT
+================================ */
+
+.about {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+    align-items: center;
+}
+
+
+.about-image {
+    height: 650px;
+    overflow: hidden;
+}
+
+
+.about-image img {
+    height: 100%;
+    object-fit: cover;
+
+    transition: 0.7s;
+}
+
+
+.about-image:hover img {
+    transform: scale(1.08);
+}
+
+
+.about-content p {
+    margin-top: 25px;
+
+    line-height: 1.9;
+
+    color: #666;
+}
+
+
+.text-link {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 15px;
+
+    margin-top: 35px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+
+.text-link i {
+    transition: 0.3s;
+}
+
+
+.text-link:hover i {
+    transform: translateX(8px);
+}
+
+
+/* ===============================
+   FEATURES
+================================ */
+
+.features {
+    background: #1c1c1c;
+    color: white;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.feature-card {
+    padding: 70px 60px;
+
+    border-right: 1px solid #444;
+
+    transition: 0.4s;
+}
+
+
+.feature-card:hover {
+    background: #e96b3c;
+}
+
+
+.feature-number {
+    font-family: "Anton", sans-serif;
+
+    font-size: 70px;
+
+    color: #777;
+}
+
+
+.feature-card h3 {
+    margin-top: 25px;
+    font-size: 22px;
+}
+
+
+.feature-card p {
+    margin-top: 15px;
+
+    color: #bbb;
+
+    line-height: 1.8;
+
+    font-size: 14px;
+}
+
+
+.feature-card:hover p {
+    color: white;
+}
+
+
+/* ===============================
+   MENU
+================================ */
+
+.menu {
+    background: #f4f1ea;
+}
+
+
+.menu-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-end;
+
+    margin-bottom: 60px;
+}
+
+
+.product-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+.product-card {
+    cursor: pointer;
+}
+
+
+.product-image {
+    height: 420px;
+    overflow: hidden;
+}
+
+
+.product-image img {
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+
+.product-card:hover img {
+    transform: scale(1.1);
+}
+
+
+.product-info {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid #ccc;
+}
+
+
+.product-info h3 {
+    font-size: 16px;
+}
+
+
+.product-info p {
+    font-size: 12px;
+
+    color: #777;
+
+    margin-top: 5px;
+}
+
+
+.product-info span {
+    font-weight: 600;
+
+    color: #e96b3c;
+}
+
+
+/* ===============================
+   BANNER
+================================ */
+
+.banner {
+    height: 700px;
+
+    position: relative;
+
+    background-image:
+        url("https://images.unsplash.com/photo-1512568400610-62da28bc8a13?auto=format&fit=crop&w=1920&q=90");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+}
+
+
+.banner-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.55);
+}
+
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+.banner-content p {
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+
+
+.banner-content h2 {
+    font-family: "Anton", sans-serif;
+
+    font-size: clamp(70px, 10vw, 150px);
+
+    line-height: 0.9;
+
+    margin-top: 20px;
+}
+
+
+/* ===============================
+   HOW IT WORKS
+================================ */
+
+.how {
+    background: white;
+}
+
+
+.steps {
+    margin-top: 80px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 50px;
+}
+
+
+.step {
+    border-top: 2px solid #111;
+
+    padding-top: 25px;
+}
+
+
+.step span {
+    font-family: "Anton", sans-serif;
+
+    font-size: 50px;
+
+    color: #e96b3c;
+}
+
+
+.step h3 {
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+
+.step p {
+    margin-top: 15px;
+
+    color: #777;
+
+    line-height: 1.8;
+
+    font-size: 14px;
+}
+
+
+/* ===============================
+   TESTIMONIAL
+================================ */
+
+.testimonial {
+    background: #e96b3c;
+
+    color: white;
+
+    padding: 120px 8%;
+
+    text-align: center;
+}
+
+
+.testimonial-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+
+.quote-icon {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+
+.testimonial-container p {
+    font-size: clamp(25px, 4vw, 50px);
+
+    line-height: 1.4;
+
+    font-weight: 500;
+}
+
+
+.testimonial-container h4 {
+    margin-top: 35px;
+
+    letter-spacing: 2px;
+
+    font-size: 12px;
+}
+
+
+.testimonial-buttons {
+    margin-top: 50px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+
+.testimonial-buttons button {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    border: 1px solid white;
+
+    background: transparent;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.testimonial-buttons button:hover {
+    background: white;
+    color: #e96b3c;
+}
+
+
+/* ===============================
+   CTA
+================================ */
+
+.cta {
+    background: #1b1b1b;
+
+    color: white;
+
+    padding: 120px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.cta h2 {
+    font-family: "Anton", sans-serif;
+
+    font-size: clamp(60px, 8vw, 120px);
+
+    line-height: 0.9;
+}
+
+
+.cta-button {
+    display: flex;
+
+    align-items: center;
+    gap: 20px;
+
+    background: #e96b3c;
+
+    padding: 20px 30px;
+
+    border-radius: 50px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.cta-button:hover {
+    transform: translateY(-5px);
+}
+
+
+/* ===============================
+   FOOTER
+================================ */
+
+footer {
+    background: #111;
+
+    color: white;
+
+    padding: 80px 8% 30px;
+}
+
+
+.footer-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-bottom: 70px;
+}
+
+
+.footer-brand h2 {
+    font-family: "Anton", sans-serif;
+
+    font-size: 70px;
+}
+
+
+.footer-brand span {
+    color: #e96b3c;
+}
+
+
+.footer-brand p {
+    margin-top: 20px;
+
+    color: #aaa;
+
+    line-height: 1.8;
+}
+
+
+.footer-links {
+    display: flex;
+
+    gap: 100px;
+}
+
+
+.footer-links h4 {
+    margin-bottom: 25px;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+
+.footer-links a {
+    display: block;
+
+    color: #aaa;
+
+    margin-bottom: 12px;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.footer-links a:hover {
+    color: #e96b3c;
+}
+
+
+.footer-bottom {
+    border-top: 1px solid #333;
+
+    padding-top: 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #777;
+
+    font-size: 11px;
+}
+
+
+/* ===============================
+   RESPONSIVE TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+    .nav-menu,
+    .nav-button {
+        display: none;
+    }
+
+
+    .hamburger {
+        display: block;
+    }
+
+
+    .nav-menu.active {
+        display: flex;
+
+        position: absolute;
+
+        top: 75px;
+        left: 0;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        background: #1b1b1b;
+
+        padding: 30px;
+
+        gap: 25px;
+    }
+
+
+    .about {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+
+    .feature-card {
+        border-right: none;
+        border-bottom: 1px solid #444;
+    }
+
+
+    .product-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+
+    .cta {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 40px;
+    }
+
+}
+
+
+/* ===============================
+   RESPONSIVE MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 20px 6%;
+    }
+
+
+    .navbar.scrolled {
+        padding: 15px 6%;
+    }
+
+
+    .section {
+        padding: 80px 6%;
+    }
+
+
+    .hero {
+        height: 100svh;
+        min-height: 100svh;
+
+        padding: 0 6%;
+
+        background-position: center center;
+
+        background-attachment: scroll;
+    }
+
+
+    .hero h1 {
+        font-size: clamp(60px, 16vw, 100px);
+    }
+
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .scroll-down {
+        left: 6%;
+    }
+
+
+    .intro-text {
+        padding: 35px 6%;
+    }
+
+
+    .intro-text p {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+
+    .about-image {
+        height: 450px;
+    }
+
+
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .product-image {
+        height: 400px;
+    }
+
+
+    .menu-header {
+        align-items: center;
+    }
+
+
+    .menu-arrow {
+        width: 55px;
+        height: 55px;
+    }
+
+
+    .banner {
+        height: 550px;
+
+        background-position: center center;
+
+        background-attachment: scroll;
+    }
+
+
+    .footer-top {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+
+    .footer-links {
+        gap: 50px;
+    }
+
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+    /* Menghilangkan efek gambar bergerak di HP */
+
+    .about-image:hover img,
+    .product-card:hover img {
+        transform: none;
+    }
+
+}
